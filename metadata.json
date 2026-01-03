@@ -1,0 +1,7 @@
+{
+  "name": "Sólon - El Buscador de Patrones",
+  "description": "Un agente experto en búsqueda de empleos inmediatos y estrategias de inversión con capital mínimo, basado en el análisis de patrones existenciales y de mercado.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

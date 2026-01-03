@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sólon - Oportunidades y Patrones</title>
+    
+    <!-- Metadatos para compartir (OpenGraph) -->
+    <meta property="og:title" content="Sólon - El Buscador de Patrones">
+    <meta property="og:description" content="Agente experto en búsqueda de empleos y micro-inversión basado en el análisis de patrones de mercado.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
+        :root {
+            --pattern-gold: #c5a059;
+            --pattern-dark: #0a0a0c;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--pattern-dark);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .cinzel { font-family: 'Cinzel', serif; }
+
+        .pattern-bg {
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(197, 160, 89, 0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .glass-card {
+            background: rgba(20, 20, 25, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .gold-text {
+            color: var(--pattern-gold);
+        }
+
+        .gold-border {
+            border-color: var(--pattern-gold);
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #c5a059 0%, #8e6d2b 100%);
+        }
+
+        /* Leaflet Dark Mode */
+        .leaflet-container {
+            background: #0a0a0c !important;
+            border-radius: 1rem;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .leaflet-tile {
+            filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+        }
+        .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+            background: #141419 !important;
+            color: white !important;
+            border: 1px solid #c5a059 !important;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a059;
+            border-radius: 10px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "leaflet": "https://esm.sh/leaflet@1.9.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="pattern-bg min-h-screen">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
